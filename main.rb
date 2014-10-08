@@ -2,7 +2,7 @@ require 'sinatra'
 require 'haml'
 
 get '/' do
-  haml :index
+  erb :index
 end
 
 not_found do
