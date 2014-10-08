@@ -1,7 +1,8 @@
 require 'sinatra'
+require 'haml'
 
 get '/' do
-  erb :index
+  haml :index
 end
 
 not_found do
