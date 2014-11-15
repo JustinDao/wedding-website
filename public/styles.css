@@ -1,17 +1,33 @@
 body {
+  /*http://css-tricks.com/perfect-full-page-background-image/*/
+  background: url(/kfv/KFV3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  transition: background 0.3s linear;
+}
+
+h1
+{
+  background-color: rgba(255,255,255,0.3)
+}
+
+#body-login
+{
   background: url("/bg-body.png") repeat;
-  /*color: white;*/
 }
 
 .navbar-default {
-  background-color: #4CBB17;
-  border-color: #4CBB17;
+  background-color: rgba(255,255,255,0.3);
+  border-color: transparent;
   border-radius: 0;
-  color: white;
+  color: black;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav li a {
-  color: white;
+  /*color: white;*/
+  color: black;
 }
 
 .text-center {

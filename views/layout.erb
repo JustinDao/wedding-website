@@ -13,14 +13,28 @@
       <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script src="scripts.js"></script>
     </meta>
   </head>
-  <body>
-    <% if session['is_logged_in'] %>
+  <% if session['is_logged_in'] %>
+    <body>
       <%= erb :header %>
-    <% end %>
-    <div class="container">
-      <%= yield %>
-    </div>
-  </body>
+      
+      <div class="container">
+        <button id="prev">
+          <span class="glyphicon glyphicon-arrow-left"></span>
+        </button>
+        <button id="next">
+          <span class="glyphicon glyphicon-arrow-right"></span>
+        </button>
+        <%= yield %>        
+      </div>
+    </body>
+  <% else %>
+    <body id="body-login">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </body>
+  <% end %>  
 </html>

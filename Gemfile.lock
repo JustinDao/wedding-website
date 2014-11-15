@@ -12,7 +12,7 @@ GEM
     tilt (1.4.1)
 
 PLATFORMS
-  x64-mingw32
+  ruby
 
 DEPENDENCIES
   config_env
