@@ -1,0 +1,4 @@
+# any ENV['RACK_ENV']
+config_env do 
+  set 'login_password', 'password'
+end

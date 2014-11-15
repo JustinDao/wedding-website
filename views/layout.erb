@@ -16,7 +16,9 @@
     </meta>
   </head>
   <body>
-    <%= erb :header %>
+    <% if session['is_logged_in'] %>
+      <%= erb :header %>
+    <% end %>
     <div class="container">
       <%= yield %>
     </div>

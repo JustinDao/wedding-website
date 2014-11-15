@@ -1,4 +1,7 @@
 require 'sinatra'
+require 'config_env'
+
+ConfigEnv.path_to_config("#{__dir__}/config/config_env.rb")
 
 # https://stackoverflow.com/questions/26896375
 use Rack::Session::Pool 
@@ -26,7 +29,7 @@ get "/login" do
 end
 
 post '/login' do
-  if params['password'] == "mypassword"
+  if params['password'] == ENV['login_password']
     session["is_logged_in"] = true
     redirect '/'
   else

@@ -13,3 +13,15 @@ body {
 .navbar-default .navbar-brand, .navbar-default .navbar-nav li a {
   color: white;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.absolute-center {
+  max-width: 50%;
+  max-height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}

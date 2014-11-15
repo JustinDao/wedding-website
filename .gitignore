@@ -1,1 +1,4 @@
 .DS_Store
+
+# Ignore local environment variables
+/config/config_env.rb
