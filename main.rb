@@ -46,8 +46,12 @@ get '/' do
   erb :index
 end
 
-get '/info' do
-  erb :info
+get '/details' do
+  erb :details
+end
+
+get '/hotels' do
+  erb :hotels
 end
 
 not_found do
