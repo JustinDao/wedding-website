@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     if(new_num == 0)
     {
-      new_num = 34;
+      new_num = 11;
     }
 
     $("body").css('background-image', 'url(../kfv/KFV' + new_num + '.jpg)');
@@ -23,7 +23,7 @@ $(document).ready(function() {
     var num  = parseInt(picture_path.match(/\d+/)[0]);
     var new_num = num + 1;
 
-    if(new_num == 35)
+    if(new_num == 12)
     {
       new_num = 1;
     }
