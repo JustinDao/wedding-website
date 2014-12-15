@@ -2,12 +2,23 @@ $(document).ready(function() {
 
   var minPicutreNum = 1;
   var maxPictureNum = 7;
-  var timeToChange = 60000;
-
-  setTimeout(changeBackground, timeToChange);
+  var timeToChange = 15000;
 
   var rand = getRandom(minPicutreNum, maxPictureNum);
   $("body:not(#body-login)").css('background-image', 'url(../kfv/KFV' + rand + '.jpg)');
+
+  var url = window.location.href;
+  var host = window.location.host;
+
+  var root_path = "http://" + host + "/";
+  var login_path = "http://" + host + "/login";
+
+  if(url == root_path)
+  {
+    setTimeout(changeBackground, timeToChange);
+  }  
+
+  // $("#welcome-header").parent().css("background-color", "rgba(0,0,0,0)");
 
   function changeBackground() {
     var background = $("body").css('background-image');
