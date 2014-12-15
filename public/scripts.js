@@ -7,7 +7,7 @@ $(document).ready(function() {
   setTimeout(changeBackground, timeToChange);
 
   var rand = getRandom(minPicutreNum, maxPictureNum);
-  $("body").css('background-image', 'url(../kfv/KFV' + rand + '.jpg)');
+  $("body:not(#body-login)").css('background-image', 'url(../kfv/KFV' + rand + '.jpg)');
 
   function changeBackground() {
     var background = $("body").css('background-image');
