@@ -22,20 +22,17 @@
       <%= erb :header %>
       
       <div class="container">
-        <button id="prev">
-          <span class="glyphicon glyphicon-arrow-left"></span>
-        </button>
-        <button id="next">
-          <span class="glyphicon glyphicon-arrow-right"></span>
-        </button>
         <%= yield %>        
       </div>
+
     </body>
   <% else %>
     <body id="body-login">
+
       <div class="container">
         <%= yield %>
       </div>
+      
     </body>
   <% end %>  
 </html>

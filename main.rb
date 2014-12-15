@@ -7,6 +7,11 @@ ConfigEnv.path_to_config("#{__dir__}/config/config_env.rb")
 # https://stackoverflow.com/questions/26896375
 use Rack::Session::Pool, :expire_after => 2592000
 
+# Needed for shotgun?
+# http://stackoverflow.com/questions/9827151/shotgun-everytime-got-new-sessions-cant-store-datain-sessions
+enable :sessions
+set :session_secret, ENV['session_secret']
+
 helpers do
   def logged_in?
     session["is_logged_in"] && session["password"] == Digest::MD5.hexdigest(ENV['login_password'])

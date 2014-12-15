@@ -1,35 +1,37 @@
 $(document).ready(function() {
-  $("#prev").click(function(){
+
+  var minPicutreNum = 1;
+  var maxPictureNum = 11;
+  var timeToChange = 60000;
+
+  setTimeout(changeBackground, timeToChange);
+
+  var rand = getRandom(minPicutreNum, maxPictureNum);
+  $("body").css('background-image', 'url(../kfv/KFV' + rand + '.jpg)');
+
+  function changeBackground() {
     var background = $("body").css('background-image');
     var start = background.indexOf("kfv/") + 4;
     var end = background.length - 1;
     var picture_path = background.substring(start, end);
     var num  = parseInt(picture_path.match(/\d+/)[0]);
-    var new_num = num - 1;
+    var new_num = num;
 
-    if(new_num == 0)
+    while(new_num == num)
     {
-      new_num = 11;
+      new_num = getRandom(minPicutreNum, maxPictureNum);
     }
 
     $("body").css('background-image', 'url(../kfv/KFV' + new_num + '.jpg)');
-  });
 
-  $("#next").click(function(){
-    var background = $("body").css('background-image');
-    var start = background.indexOf("kfv/") + 4;
-    var end = background.length - 1;
-    var picture_path = background.substring(start, end);
-    var num  = parseInt(picture_path.match(/\d+/)[0]);
-    var new_num = num + 1;
+    setTimeout(changeBackground, timeToChange)
+  }
 
-    if(new_num == 12)
-    {
-      new_num = 1;
-    }
-
-    $("body").css('background-image', 'url(../kfv/KFV' + new_num + '.jpg)');
-  });
+  // http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
+  function getRandom(min, max)
+  {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
   function initialize() {
     var mapCanvas = document.getElementById('map_canvas');
