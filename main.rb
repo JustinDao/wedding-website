@@ -66,6 +66,20 @@ get '/hotels' do
   erb :hotels
 end
 
-not_found do
-  halt 404, 'page not found'
+get '/contact' do
+  erb :contact
 end
+
+get '/about' do
+  erb :about
+end
+
+get '/registries' do
+  erb :registries
+end
+
+not_found do
+ status 404
+ erb :page404
+end
+
