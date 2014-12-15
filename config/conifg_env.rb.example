@@ -1,4 +1,9 @@
 # any ENV['RACK_ENV']
 config_env do 
   set 'login_password', 'password'
+  set 'session_secret', 'mySecret'
+  set 'alex_phone', '(555) 555-5555'
+  set 'alex_email', 'alex@example.com'
+  set 'justin_phone', '(555) 555-5555'
+  set 'justin_email', 'justin@example.com'
 end

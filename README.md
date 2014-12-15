@@ -4,7 +4,7 @@ Justin & Alex's Wedding Website
 
 `cp /config/config_env.rb.example /config/config_env.rb`
 
-And set the global password there. 
+And set the global environment variables there.
 
 `gem install bundler`
 
