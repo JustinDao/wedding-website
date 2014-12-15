@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var minPicutreNum = 1;
-  var maxPictureNum = 11;
+  var maxPictureNum = 7;
   var timeToChange = 60000;
 
   setTimeout(changeBackground, timeToChange);
