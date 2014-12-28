@@ -1,48 +1,48 @@
 $(document).ready(function() {
 
-  var minPicutreNum = 1;
-  var maxPictureNum = 7;
-  var timeToChange = 15000;
+  // var minPicutreNum = 1;
+  // var maxPictureNum = 7;
+  // var timeToChange = 15000;
 
-  var rand = getRandom(minPicutreNum, maxPictureNum);
-  $("body:not(#body-login)").css('background-image', 'url(../kfv/KFV' + rand + '.jpg)');
+  // var rand = getRandom(minPicutreNum, maxPictureNum);
+  // $("body:not(#body-login)").css('background-image', 'url(../kfv/KFV' + rand + '.jpg)');
 
-  var url = window.location.href;
-  var host = window.location.host;
+  // var url = window.location.href;
+  // var host = window.location.host;
 
-  var root_path = "http://" + host + "/";
-  var login_path = "http://" + host + "/login";
+  // var root_path = "http://" + host + "/";
+  // var login_path = "http://" + host + "/login";
 
-  if(url == root_path)
-  {
-    setTimeout(changeBackground, timeToChange);
-  }  
+  // if(url == root_path)
+  // {
+  //   setTimeout(changeBackground, timeToChange);
+  // }  
 
-  // $("#welcome-header").parent().css("background-color", "rgba(0,0,0,0)");
+  // // $("#welcome-header").parent().css("background-color", "rgba(0,0,0,0)");
 
-  function changeBackground() {
-    var background = $("body").css('background-image');
-    var start = background.indexOf("kfv/") + 4;
-    var end = background.length - 1;
-    var picture_path = background.substring(start, end);
-    var num  = parseInt(picture_path.match(/\d+/)[0]);
-    var new_num = num;
+  // function changeBackground() {
+  //   var background = $("body").css('background-image');
+  //   var start = background.indexOf("kfv/") + 4;
+  //   var end = background.length - 1;
+  //   var picture_path = background.substring(start, end);
+  //   var num  = parseInt(picture_path.match(/\d+/)[0]);
+  //   var new_num = num;
 
-    while(new_num == num)
-    {
-      new_num = getRandom(minPicutreNum, maxPictureNum);
-    }
+  //   while(new_num == num)
+  //   {
+  //     new_num = getRandom(minPicutreNum, maxPictureNum);
+  //   }
 
-    $("body").css('background-image', 'url(../kfv/KFV' + new_num + '.jpg)');
+  //   $("body").css('background-image', 'url(../kfv/KFV' + new_num + '.jpg)');
 
-    setTimeout(changeBackground, timeToChange)
-  }
+  //   setTimeout(changeBackground, timeToChange)
+  // }
 
-  // http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
-  function getRandom(min, max)
-  {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  // // http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
+  // function getRandom(min, max)
+  // {
+  //   return Math.floor(Math.random() * (max - min + 1)) + min;
+  // }
 
   function initialize() {
     var mapCanvas = document.getElementById('map_canvas');
