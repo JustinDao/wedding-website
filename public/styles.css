@@ -66,6 +66,7 @@ underline {
 }
 
 .white-with-border {
+  /*http://stackoverflow.com/questions/2570972/css-font-border*/
   color: white;
   text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
   /*-webkit-text-stroke: 0.3px black;*/
