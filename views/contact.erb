@@ -4,39 +4,44 @@ body {
 }
 </style>
 
-<div id="contact">
-  <div class="row">
-    <div class="col-xs-12">
-      <h2 id="alex-contact">
-        <underline>Alex's Contact Info</underline>
-      </h2>
-    </div>   
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="info">
-        <%= "Email: #{ENV['alex_email']}" %>
-        <br>
-        <%= "Phone: #{ENV['alex_phone']}" %>
+<div id="contact" class="container">
+  <div class="row white-with-border">
+    <div class="col-xs-6 text-right">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 id="alex-contact">
+            <underline>Alex's Contact Info</underline>
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="info">
+            <%= "Email: #{ENV['alex_email']}" %>
+            <br>
+            <%= "Phone: #{ENV['alex_phone']}" %>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <h2 id="justin-contact">
-        <underline>Justin's Contact Info</underline>
-      </h2>
-    </div>   
-  </div>
+    <div class="col-xs-6">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 id="justin-contact">
+            <underline>Justin's Contact Info</underline>
+          </h2>
+        </div>   
+      </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="info">
-        <%= "Email: #{ENV['justin_email']}" %>
-        <br>
-        <%= "Phone: #{ENV['justin_phone']}" %>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="info">
+            <%= "Email: #{ENV['justin_email']}" %>
+            <br>
+            <%= "Phone: #{ENV['justin_phone']}" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

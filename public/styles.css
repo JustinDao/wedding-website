@@ -20,8 +20,11 @@ underline {
 
 .container
 {
-  /*background-color: rgba(255,255,255,0.3);*/
   padding-bottom: 10px;
+}
+
+.translucent-background {
+  background-color: rgba(255,255,255,0.3);
 }
 
 #body-login
@@ -45,6 +48,10 @@ underline {
   text-align: center;
 }
 
+.text-right {
+ text-align: right;
+}
+
 .absolute-center {
   max-width: 50%;
   max-height: 50%;
@@ -56,4 +63,10 @@ underline {
 #map_canvas {
   width: 500px;
   height: 400px;
+}
+
+.white-with-border {
+  color: white;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  /*-webkit-text-stroke: 0.3px black;*/
 }
