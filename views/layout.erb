@@ -7,24 +7,23 @@
       </title>
       <!-- Latest compiled and minified CSS -->
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"></link>
-      <link href="styles.css" rel="stylesheet"></link>
+      <link href="css/styles.css" rel="stylesheet"></link>
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
       <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
       <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js"></script>
-      <script src="scripts.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
     </meta>
   </head>
   <% if session['is_logged_in'] %>
     <body>
       <%= erb :header %>
-      
-      <div class="container">
-        <%= yield %>        
-      </div>
 
+      <%= yield %>
     </body>
   <% else %>
     <body id="body-login">
