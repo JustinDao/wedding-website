@@ -1,3 +1,10 @@
+section {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #home {
   background-image: url('../kfv/KFV5.jpg');
 }

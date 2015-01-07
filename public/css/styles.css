@@ -12,21 +12,17 @@ h1 {
 }
 
 section {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.slide {
   background-attachment: fixed;
   width:100%;
   height:100%;
   position: relative;
 }
 
+.container {
+  padding: 50px 0;
+}
+
 #welcome {
-  /*margin-top: 300px;*/
   color: white;
   background-color: rgba(0,0,0, 0.5);
 }
@@ -54,12 +50,6 @@ section {
   width: 100%;
 }
 
-.anchor {
-  display: block; 
-  position: relative;
-  visibility: hidden;
-}
-
 .underline {
   text-decoration: underline;
 }
@@ -68,31 +58,8 @@ section {
   font-size: 20px;
 }
 
-.container
-{
-  padding: 50px 0;
-}
-
 .translucent-background {
   background-color: rgba(255,255,255,0.3);
-}
-
-#body-login
-{
-  background: url("/bg-body.png") repeat;
-}
-
-.absolute-center {
-  max-width: 50%;
-  max-height: 50%;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}
-
-#map_canvas {
-  width: 500px;
-  height: 400px;
 }
 
 .white-with-border {
