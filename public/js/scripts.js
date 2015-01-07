@@ -5,6 +5,12 @@ $(document).ready(function() {
     responsive: true,
   });
 
+  // $(".jump-anchor").click(function(e) {
+  //   e.preventDefault();
+  //   console.log($(this).attr('href'));
+  //   $('body').scrollTo($(this).attr('href'));
+  // });
+
   function initialize() {
     var mapCanvas = document.getElementById('map_canvas');
 

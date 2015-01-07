@@ -1,28 +1,51 @@
 section {
+  /*background: url("/bg-body.png") repeat;*/
+}
+
+.blue {
+  background: #0047AB;
+  height: 5px;
+  width: 100%;
+}
+
+.green {
+  background: #4CBB17;
+  height: 15px;
+  width: 100%;
+}
+
+.space {
+  background: url("/bg-body.png") repeat;
+  height: 10px;
+}
+
+#home {
+  background-image: url('../kfv/KFV5-2.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-#home {
-  background-image: url('../kfv/KFV5.jpg');
+#about {
+  background: url("/bg-body.png") repeat;
 }
 
-#about {
-  background-image: url('../kfv/KFV4.jpg');
+#gallery {
+  background: #4CBB17;
+  color: white;
 }
 
 #details {
-  background-image: url('../kfv/KFV7.jpg');
+  background: url("/bg-body.png") repeat;
 }
 
 #hotels {
-  background-image: url('../kfv/KFV6.jpg');
+  background: url("/bg-body.png") repeat;
 }
 
 #registries {
-  background-image: url('../kfv/KFV2.jpg');
+  background: #4CBB17;
 }
 
 #contact {
