@@ -7,10 +7,6 @@ html, body {
   height: 100%;
 }
 
-.navbar {
-  margin-bottom: 0px;
-}
-
 h1 {
   margin: 0;
 }
@@ -20,7 +16,6 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  top: 50px;
 }
 
 .slide {
@@ -30,29 +25,11 @@ section {
   position: relative;
 }
 
-#home-section {
-  background-image: url('../kfv/KFV5.jpg');
-}
-
-#about-section {
-  background-image: url('../kfv/KFV4.jpg');
-}
-
-#details-section {
-  background-image: url('../kfv/KFV2.jpg');
-}
-
 #welcome {
   /*margin-top: 300px;*/
   color: white;
   background-color: rgba(0,0,0, 0.5);
 }
-
-/* http://stackoverflow.com/questions/4086107/html-positionfixed-page-header-and-in-page-anchors */
-/*section {
- padding-top: 50px;
-}*/
-
 
 /* http://css-tricks.com/centering-in-the-unknown/ */
 .center-block {
@@ -83,7 +60,7 @@ section {
   visibility: hidden;
 }
 
-underline {
+.underline {
   text-decoration: underline;
 }
 
@@ -93,7 +70,7 @@ underline {
 
 .container
 {
-  padding-bottom: 10px;
+  padding: 50px 0;
 }
 
 .translucent-background {
@@ -103,18 +80,6 @@ underline {
 #body-login
 {
   background: url("/bg-body.png") repeat;
-}
-
-.navbar-default {
-  background-color: rgba(255,255,255,1);
-  border-color: transparent;
-  border-radius: 0;
-  color: black;
-}
-
-.navbar-default .navbar-brand, .navbar-default .navbar-nav li a {
-  /*color: white;*/
-  color: black;
 }
 
 .absolute-center {

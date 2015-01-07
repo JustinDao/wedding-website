@@ -1,0 +1,30 @@
+.navbar-default {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav li a {
+  color: white;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  color: #EEE;
+}
+
+.navbar-default .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #EEE;
+}
+
+.navbar-default .navbar-brand img {
+  max-height: 50px;
+}
