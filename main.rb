@@ -44,7 +44,7 @@ post '/login' do
     session["password"] = Digest::MD5.hexdigest ENV['login_password']
     redirect '/'
   else
-    halt 401
+    redirect '/login'
   end
 end
 
