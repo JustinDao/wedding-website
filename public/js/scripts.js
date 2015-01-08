@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  // http://stackoverflow.com/questions/18153745/bootstrap-3-hide-dropdown-menu-on-menu-item-click
+  $(".navbar li a").click(function(event) {
+    $(".navbar-collapse").removeClass("in").addClass("collapse");
+  });
+
   // http://markdalgleish.com/2012/10/mobile-parallax-with-stellar-js/
   var ua = navigator.userAgent,
     isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
@@ -8,18 +13,8 @@ $(document).ready(function() {
   }
 
   $(function(){
-    var iScrollInstance;
-
-    if (isMobileWebkit) {
-      iScrollInstance = new iScroll('wrapper');
-
-      $('#scroller').stellar({
-        scrollProperty: 'transform',
-        positionProperty: 'transform',
-        horizontalScrolling: false,
-        responsive: true,
-      });
-    } else {
+    // only show parallax on non-mobile
+    if (!isMobileWebkit) {
       $.stellar({
         horizontalScrolling: false,
         responsive: true,

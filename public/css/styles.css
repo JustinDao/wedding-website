@@ -23,13 +23,6 @@ h1 {
   font-size: 40px;
 }
 
-#home {
-  background-attachment: fixed;
-  width:100%;
-  height:100%;
-  position: relative;
-}
-
 .container {
   padding: 50px 0;
 }
@@ -54,7 +47,7 @@ h1 {
   content: '';
   display: inline-block;
   height: 100%;
-  margin-top: -350px;
+  margin-top: -40vh;
   vertical-align: middle;
   margin-right: -0.25em; /* Adjusts for spacing */
 }
@@ -87,7 +80,13 @@ h1 {
 }
 
 .back-bg-white-text {
-  margin-top: 100px;
+  margin-top: 20vh;
   background-color: rgba(0,0,0,0.5);
   color: white;
+}
+
+.container-contact {
+  width: 100%;
+  margin-left: -15px;
+  margin-right: -15px;
 }
