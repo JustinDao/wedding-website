@@ -1,5 +1,5 @@
-section {
-  /*background: url("/bg-body.png") repeat;*/
+body {
+  background-color: #4CBB17;
 }
 
 .blue {
@@ -32,8 +32,8 @@ section {
 }
 
 #gallery {
-  background: #4CBB17;
-  color: white;
+  background: url("/bg-body.png") repeat;
+  margin: 20px 10px;
 }
 
 #details {

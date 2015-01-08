@@ -5,19 +5,32 @@ $(document).ready(function() {
     responsive: true,
   });
 
+  $('.gallery-wrapper').slick({
+    autoplay: false,
+    dots: true,
+  });
+
   var pswpElement = document.querySelectorAll('.pswp')[0];
 
   $(".gallery-link").click(function(e) {
     e.preventDefault();
 
     var thisImage = $(this);
-    var index = -1;
+    var count = 0;
     var items = [];
 
     $(".gallery-link").each(function(i, val) {
+      if ($(this).parent().parent().hasClass('slick-cloned')) {
+        // http://api.jquery.com/jquery.each/
+        return true; //same as continue
+      }
+
       // http://stackoverflow.com/questions/2639070/get-the-full-uri-from-the-href-property-of-a-link
       if (val.href == thisImage.get(0).href) {
-        index = i;
+        index = count;
+      }
+      else {
+        count += 1;
       }
 
       //http://stackoverflow.com/questions/8636857/get-the-width-of-an-image-specified-by-an-url-jquery
