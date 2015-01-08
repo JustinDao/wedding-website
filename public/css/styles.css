@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Noteworthy';
+  src: url(/fonts/Noteworthy.eot) format('embedded-opentype'), 
+       url(/fonts/Noteworthy.woff) format('woff'),
+       url(/fonts/Noteworthy.ttf) format('truetype'),
+       url(/fonts/Noteworthy.svg) format('svg'),
+       url(/fonts/Noteworthy.otf) format('opentype');
+  font-style: normal;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -9,6 +19,8 @@ html, body {
 
 h1 {
   margin: 0;
+  font-family: 'Noteworthy', sans-serif;
+  font-size: 40px;
 }
 
 #home {
@@ -29,6 +41,7 @@ h1 {
 #welcome {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
 }
 
 /* http://css-tricks.com/centering-in-the-unknown/ */
