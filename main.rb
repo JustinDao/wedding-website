@@ -1,8 +1,10 @@
 require 'sinatra'
 require 'config_env'
 require 'digest'
+require 'data_mapper' 
 
 ConfigEnv.path_to_config("#{__dir__}/config/config_env.rb")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/wedding.db")
 
 # https://stackoverflow.com/questions/26896375
 use Rack::Session::Pool, :expire_after => 2592000
@@ -55,7 +57,17 @@ get '/logout' do
 end
 
 get '/' do
+  @posts = Post.all
   erb :index
+end
+
+post '/post' do
+  name = params[:guestbook_name]
+  body = params[:guestbook_body]
+
+  Post.create(name: name, body: body)
+
+  redirect '/'
 end
 
 not_found do
@@ -63,3 +75,17 @@ not_found do
  erb :page404
 end
 
+# Models
+
+class Post
+  include DataMapper::Resource
+
+  property :id,         Serial    # An auto-increment integer key
+  property :name,       String    # A varchar type string, for short strings
+  property :body,       Text      # A text block, for longer string data.
+  property :created_at, DateTime  # A DateTime, for any date you might like.
+end
+
+
+DataMapper.finalize
+Post.auto_upgrade!

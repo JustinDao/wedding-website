@@ -6,4 +6,6 @@ config_env do
   set 'alex_email', 'alex@example.com'
   set 'justin_phone', '(555) 555-5555'
   set 'justin_email', 'justin@example.com'
+  # Delete the DATABASE_URL to use SQLite
+  set 'DATABASE_URL', 'postgres://user:password@hostname/database'
 end

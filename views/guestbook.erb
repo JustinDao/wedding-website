@@ -11,22 +11,22 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xs-offset-2 col-xs-8 text-center">
-      <textarea id="guestbook-text" class="form-control" rows="5" name="guestbook-text"></textarea>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col-xs-offset-2 col-xs-2 text-center">
-      <input id="guestbook-name" class="form-control" type="text" name="guestbook-name" placeholder="Your Name">
-    </div>
-    <div class="col-xs-offset-5 col-xs-1 text-center">
-      <div class="btn btn-primary form-control">
-        Submit
+  <form action="/post" method="post">
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8 text-center">
+        <textarea id="guestbook_body" class="form-control" rows="5" name="guestbook_body"></textarea>
       </div>
     </div>
-  </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-2 text-center">
+        <input id="guestbook_name" class="form-control" type="text" name="guestbook_name" placeholder="Your Name">
+      </div>
+      <div class="col-xs-offset-5 col-xs-1 text-center">
+        <input type="submit" class="btn btn-primary form-control">
+      </div>
+    </div>
+  </form>
 </div>
