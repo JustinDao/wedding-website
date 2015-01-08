@@ -1,10 +1,32 @@
 $(document).ready(function() {
+  // http://markdalgleish.com/2012/10/mobile-parallax-with-stellar-js/
+  var ua = navigator.userAgent,
+    isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
 
-  $.stellar({
-    horizontalScrolling: false,
-    responsive: true,
+  if (isMobileWebkit) {
+    $('html').addClass('mobile');
+  }
+
+  $(function(){
+    var iScrollInstance;
+
+    if (isMobileWebkit) {
+      iScrollInstance = new iScroll('wrapper');
+
+      $('#scroller').stellar({
+        scrollProperty: 'transform',
+        positionProperty: 'transform',
+        horizontalScrolling: false,
+        responsive: true,
+      });
+    } else {
+      $.stellar({
+        horizontalScrolling: false,
+        responsive: true,
+      });
+    }
   });
-
+ 
   var slider = $('.gallery-wrapper').slick({
     autoplay: true,
     dots: true,

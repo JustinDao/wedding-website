@@ -39,8 +39,8 @@ h1 {
 }
 
 #welcome {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  /*color: white;
+  background-color: rgba(0, 0, 0, 0.5);*/
   padding: 10px 0;
 }
 
@@ -54,7 +54,7 @@ h1 {
   content: '';
   display: inline-block;
   height: 100%;
-  margin-top: -100px;
+  margin-top: -350px;
   vertical-align: middle;
   margin-right: -0.25em; /* Adjusts for spacing */
 }

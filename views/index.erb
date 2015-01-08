@@ -1,45 +1,49 @@
-<section id="home" data-stellar-background-ratio="0.4">
-  <div class="text-center center-block">
-    <h1 id="welcome" class="centered"> Welcome to Justin & Alex's Wedding Website! </h1>
+<div id="wrapper">
+  <div id="scroller">
+    <section id="home" data-stellar-background-ratio="0.4">
+      <div class="text-center center-block">
+        <h1 id="welcome" class="centered"> Justin & Alex are getting married! </h1>
+      </div>
+    </section>
+
+    <section id="about">
+      <%= erb :about %>
+    </section>
+
+    <div class="blue"></div>
+    <div class="space"></div>
+
+    <section id="gallery" data-stellar-background-ratio="0.5">
+      <%= erb :gallery %>
+    </section>
+
+    <div class="space"></div>
+    <div class="blue"></div>
+
+    <section id="details">
+      <%= erb :details %>
+    </section>
+
+    <div class="blue"></div>
+    <div class="space"></div>
+    <div class="blue"></div>
+
+    <section id="hotels">
+      <%= erb :hotels %>
+    </section>
+
+    <section id="registries" data-stellar-background-ratio="0.5">
+      <%= erb :registries %>
+    </section>
+
+    <section id="guestbook" >
+      <%= erb :guestbook %>
+    </section>
+
+    <section id="contact" data-stellar-background-ratio="0.5">
+      <%= erb :contact %>
+    </section>
+
+    <%= erb :photoswipe %>
   </div>
-</section>
-
-<section id="about">
-  <%= erb :about %>
-</section>
-
-<div class="blue"></div>
-<div class="space"></div>
-
-<section id="gallery" data-stellar-background-ratio="0.5">
-  <%= erb :gallery %>
-</section>
-
-<div class="space"></div>
-<div class="blue"></div>
-
-<section id="details">
-  <%= erb :details %>
-</section>
-
-<div class="blue"></div>
-<div class="space"></div>
-<div class="blue"></div>
-
-<section id="hotels">
-  <%= erb :hotels %>
-</section>
-
-<section id="registries" data-stellar-background-ratio="0.5">
-  <%= erb :registries %>
-</section>
-
-<section id="guestbook" >
-  <%= erb :guestbook %>
-</section>
-
-<section id="contact" data-stellar-background-ratio="0.5">
-  <%= erb :contact %>
-</section>
-
-<%= erb :photoswipe %>
+</div>
