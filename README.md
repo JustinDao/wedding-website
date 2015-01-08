@@ -2,7 +2,7 @@ Justin & Alex's Wedding Website
 ==============
 ### To Deploy
 
-`cp /config/config_env.rb.example /config/config_env.rb`
+`cp config/config_env.rb.example config/config_env.rb`
 
 And set the global environment variables there.
 
