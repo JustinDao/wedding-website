@@ -45,7 +45,12 @@ body {
 }
 
 #registries {
-  background: #4CBB17;
+  background-image: url('../kfv/KFV2.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
 }
 
 #contact {
