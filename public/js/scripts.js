@@ -36,14 +36,20 @@ $(document).ready(function() {
    
     // define options (if needed)
     var options = {
-        index: index
+        index: index,
+        bgOpacity: 0.5,
     };
 
     // Initializes and opens PhotoSwipe
     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
+    gallery.init();   
 
   });
+
+  function slideShow(pswp) {
+    pswp.next();
+    setTimeout(slideShow(pswp), 5000);
+  }
 
   // $(".jump-anchor").click(function(e) {
   //   e.preventDefault();
