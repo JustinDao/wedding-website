@@ -53,6 +53,10 @@ body {
   min-height: 100%;
 }
 
+#guestbook {
+  background: url("/bg-body.png") repeat;
+}
+
 #contact {
   background-image: url('../kfv/KFV1.jpg');
   -webkit-background-size: cover;
