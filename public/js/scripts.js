@@ -5,7 +5,7 @@ $(document).ready(function() {
     responsive: true,
   });
 
-  $('.gallery-wrapper').slick({
+  var slider = $('.gallery-wrapper').slick({
     autoplay: true,
     dots: true,
   });
@@ -55,6 +55,18 @@ $(document).ready(function() {
 
     // Initializes and opens PhotoSwipe
     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+
+    // https://github.com/kenwheeler/slick/issues/731
+    slider.slickPause();
+    slider.find('.slick-list').off('mouseleave.slick');
+
+    gallery.listen('close', function() { 
+      slider.slickPlay();
+      slider.find('.slick-list').on('mouseleave.slick', function() {
+        slider.slickPlay();
+      });
+    });
+
     gallery.init();   
 
   });
