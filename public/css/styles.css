@@ -23,6 +23,10 @@ h1 {
   font-size: 40px;
 }
 
+textarea { 
+  resize: vertical;
+}
+
 .container {
   padding: 50px 0;
 }
