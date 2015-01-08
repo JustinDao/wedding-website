@@ -6,7 +6,7 @@ $(document).ready(function() {
   });
 
   $('.gallery-wrapper').slick({
-    autoplay: false,
+    autoplay: true,
     dots: true,
   });
 

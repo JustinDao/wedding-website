@@ -19,6 +19,8 @@
 .navbar-default .navbar-brand {
   padding-top: 0;
   padding-bottom: 0;
+  font-family: 'Noteworthy', sans-serif;
+  font-size: 25px;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -27,4 +29,8 @@
 
 .navbar-default .navbar-brand img {
   max-height: 50px;
+}
+
+#header-name {
+  vertical-align: middle;
 }
