@@ -11,6 +11,10 @@ h1 {
   margin: 0;
 }
 
+section {
+  min-height: 100%;
+}
+
 #home {
   background-attachment: fixed;
   width:100%;
