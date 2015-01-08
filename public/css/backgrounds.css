@@ -32,8 +32,8 @@ body {
 }
 
 #gallery {
-  background: url("/bg-body.png") repeat;
-  margin: 20px 10px;
+  background-image: url('../kfv/KFV7.jpg');
+/*  margin: 20px 10px;*/
 }
 
 #details {
