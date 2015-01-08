@@ -29,4 +29,19 @@
       </div>
     </div>
   </form>
+
+  <br>
+
+  <% @posts.each do |post| %>
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="panel">
+          <div class="panel-body">
+            <%= "#{post.name}: #{post.body}" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  
 </div>
