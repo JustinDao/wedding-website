@@ -92,12 +92,17 @@ $(document).ready(function() {
     pswp.next();
     setTimeout(slideShow(pswp), 5000);
   }
+  
+  // http://stackoverflow.com/questions/19012495/smooth-scroll-to-div-id-jquery
+  $(".jump-anchor").click(function(e) {
+    e.preventDefault();
+    var target = $(this).attr('href');
+    $('html, body').stop().animate({
+      scrollTop: $(target).offset().top
+    }, 1000, function(){ location.hash = target; });
 
-  // $(".jump-anchor").click(function(e) {
-  //   e.preventDefault();
-  //   console.log($(this).attr('href'));
-  //   $('body').scrollTo($(this).attr('href'));
-  // }); 
+    return false;
+  }); 
 
   function initialize() {
     var mapCanvas = document.getElementById('map_canvas');
