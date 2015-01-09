@@ -13,9 +13,11 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="info">
-            <%= "Email: #{ENV['alex_email']}" %>
+            Email: 
+            <a href="mailto:<%= ENV['alex_email'] %>"><%= "#{ENV['alex_email']}" %></a>
             <br>
-            <%= "Phone: #{ENV['alex_phone']}" %>
+            Phone: 
+            <a href="tel:<%= ENV['alex_phone'] %>"><%= "#{ENV['alex_phone']}" %></a>
           </div>
         </div>
       </div>
@@ -35,9 +37,11 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="info">
-            <%= "Email: #{ENV['justin_email']}" %>
+            Email: 
+            <a href="mailto:<%= ENV['justin_email'] %>"><%= "#{ENV['justin_email']}" %></a>
             <br>
-            <%= "Phone: #{ENV['justin_phone']}" %>
+            Phone: 
+            <a href="tel:<%= ENV['justin_phone'] %>"><%= "#{ENV['justin_phone']}" %></a>
           </div>
         </div>
       </div>

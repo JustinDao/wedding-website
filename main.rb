@@ -18,6 +18,11 @@ helpers do
   def logged_in?
     session["is_logged_in"] && session["password"] == Digest::MD5.hexdigest(ENV['login_password'])
   end
+
+  def sanitize(text)
+    Rack::Utils.escape_html(text)
+  end
+
 end
 
 before do
@@ -57,7 +62,7 @@ get '/logout' do
 end
 
 get '/' do
-  @posts = Post.all
+  @posts = Post.all.reverse
   erb :index
 end
 
@@ -84,6 +89,22 @@ class Post
   property :name,       String    # A varchar type string, for short strings
   property :body,       Text      # A text block, for longer string data.
   property :created_at, DateTime  # A DateTime, for any date you might like.
+end
+
+# http://stackoverflow.com/questions/1081926/how-do-i-format-a-date-in-ruby-to-include-rd-as-in-3rd
+class Fixnum
+  def ordinalize
+    if (11..13).include?(self % 100)
+      "#{self}th"
+    else
+      case self % 10
+        when 1; "#{self}st"
+        when 2; "#{self}nd"
+        when 3; "#{self}rd"
+        else    "#{self}th"
+      end
+    end
+  end
 end
 
 

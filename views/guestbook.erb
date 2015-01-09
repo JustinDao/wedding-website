@@ -13,7 +13,7 @@
 
   <form action="/post" method="post">
     <div class="row">
-      <div class="col-xs-offset-2 col-xs-8 text-center">
+      <div class="col-md-offset-2 col-md-8 col-xs-12 text-center">
         <textarea id="guestbook_body" class="form-control" rows="5" name="guestbook_body"></textarea>
       </div>
     </div>
@@ -21,10 +21,10 @@
     <br>
 
     <div class="row">
-      <div class="col-xs-offset-2 col-xs-2 text-center">
+      <div class="col-md-offset-2 col-md-2 col-xs-6 text-center">
         <input id="guestbook_name" class="form-control" type="text" name="guestbook_name" placeholder="Your Name">
       </div>
-      <div class="col-xs-offset-5 col-xs-1 text-center">
+      <div class="col-md-offset-5 col-md-1 col-xs-6 text-center">
         <input type="submit" class="btn btn-primary form-control">
       </div>
     </div>
@@ -34,10 +34,25 @@
 
   <% @posts.each do |post| %>
     <div class="row">
-      <div class="col-xs-offset-2 col-xs-8">
-        <div class="panel">
+      <div class="col-md-offset-2 col-md-8 col-xs-12">
+        <div class="panel panel-comment">
           <div class="panel-body">
-            <%= "#{post.name}: #{post.body}" %>
+            <div class="row noteworthy">
+              <div class="col-xs-6 post-name">
+                <% if not post.name == nil %>
+                  <strong><%= "#{post.name} wrote:" %></strong>
+                <% end %>
+              </div>
+              <div class="col-xs-6 text-right">
+                <%= post.created_at.strftime("%B #{post.created_at.day.ordinalize}, %Y %I:%M %p")%>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-12">
+                <%= sanitize(post.body).gsub(/(\r)?\n/, "<br/>") %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -45,3 +60,13 @@
   <% end %>
   
 </div>
+
+<style>
+.panel-comment {
+  margin-bottom: 0;
+  border-radius: 10px;
+  background-color: #EEE;
+  border-color: green;
+}
+
+</style>
