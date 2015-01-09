@@ -1,4 +1,9 @@
 # any ENV['RACK_ENV']
+
+about_alex = File.open('config/about_alex.html').read
+about_justin = File.open('config/about_justin.html').read
+about_us = File.open('config/about_us.html').read
+
 config_env do 
   set 'login_password', 'password'
   set 'session_secret', 'mySecret'
@@ -6,6 +11,10 @@ config_env do
   set 'alex_email', 'alex@example.com'
   set 'justin_phone', '(555) 555-5555'
   set 'justin_email', 'justin@example.com'
-  # Delete the DATABASE_URL to use SQLite
+  set 'about_alex', about_alex
+  set 'about_justin', about_justin
+  set 'about_us', about_us
+  # Delete DATABASE_URL to use SQLite
+  # Delete DATABASE_URL when running `rake config_env:heroku`
   set 'DATABASE_URL', 'postgres://user:password@hostname/database'
 end
