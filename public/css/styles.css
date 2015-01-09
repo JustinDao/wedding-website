@@ -108,3 +108,30 @@ textarea {
 .post-name {
   font-size: 18px;
 }
+
+/* http://stackoverflow.com/questions/5106181/how-to-make-div-stick-to-the-bottom-of-parent-div */
+
+.bottom{
+  position:absolute; 
+  bottom:0;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.down-arrow {
+  font-size: 50px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  vertical-align: middle;
+  width: 75px;
+  height: 60px;
+  top: 0;
+  line-height: inherit;
+  border-radius: 5px;
+}
+
+.down-arrow:before {
+  padding-right: 3px;
+}
