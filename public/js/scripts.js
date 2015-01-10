@@ -113,7 +113,7 @@ $(document).ready(function() {
     if (content_scroll_pos < target) {
       $('html, body').stop().animate({
         scrollTop: target
-      }, 1000, function(){ location.hash = target; });
+      }, 1000, function(){ location.hash = "#about" });
     }   
 
     return false;
