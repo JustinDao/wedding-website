@@ -132,6 +132,11 @@ textarea {
   border-radius: 5px;
 }
 
+.down-arrow:hover {
+  cursor: pointer;
+  color: #EEE;
+}
+
 .down-arrow:before {
   padding-right: 3px;
 }

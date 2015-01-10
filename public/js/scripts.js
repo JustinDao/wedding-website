@@ -104,6 +104,21 @@ $(document).ready(function() {
     return false;
   }); 
 
+  $('#down-arrow').click(function(e) {
+    e.preventDefault();
+
+    var content_scroll_pos = $(window).scrollTop();
+    var target = $("#about").offset().top;
+
+    if (content_scroll_pos < target) {
+      $('html, body').stop().animate({
+        scrollTop: target
+      }, 1000, function(){ location.hash = target; });
+    }   
+
+    return false;
+  });
+
   function initialize() {
     var mapCanvas = document.getElementById('map_canvas');
 
