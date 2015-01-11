@@ -1,3 +1,19 @@
+<script>
+  // http://www.w3schools.com/js/js_form_validation.asp
+  function validateForm( form ) {
+    var body = form.guestbook_body.value;
+    var name = form.guestbook_name.value;
+    if (body == null || body == "") {
+      alert("Note cannot by blank. We want to hear what you have to say!");
+      return false;
+    }
+    else if (name == null || name == "") {
+      alert("Name cannot be blank. We want to know who's leaving us such a nice note!");
+      return false;
+    }
+  }
+</script>
+
 <div class="container">
   <div class="row title-row">
     <div class="col-xs-12 text-center title">
@@ -11,7 +27,7 @@
     </div>
   </div>
 
-  <form action="/post" method="post">
+  <form name="guestbook-form" action="/post" method="post" onsubmit="return validateForm(this);">
     <div class="row">
       <div class="col-md-offset-2 col-md-8 col-xs-12 text-center">
         <textarea id="guestbook_body" class="form-control" rows="5" name="guestbook_body"></textarea>
@@ -24,7 +40,7 @@
       <div class="col-md-offset-2 col-md-2 col-xs-6 text-center">
         <input id="guestbook_name" class="form-control" type="text" name="guestbook_name" placeholder="Your Name">
       </div>
-      <div class="col-md-offset-5 col-md-1 col-xs-6 text-center">
+      <div class="col-md-offset-4 col-md-2 col-xs-6 text-right">
         <input type="submit" class="btn btn-primary form-control">
       </div>
     </div>
