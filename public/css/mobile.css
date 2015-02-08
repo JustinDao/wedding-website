@@ -30,3 +30,15 @@
   margin-left: 0px;
   margin-right: 0px;
 }
+
+.mobile #home, 
+.mobile #about,
+.mobile #gallery,
+.mobile #details,
+.mobile #hotels,
+.mobile #registries,
+.mobile #guestbook,
+.mobile #contact {
+  /* http://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/ */
+  background-attachment: scroll;
+}
