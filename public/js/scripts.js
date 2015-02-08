@@ -119,22 +119,22 @@ $(document).ready(function() {
     return false;
   });
 
-  function initialize() {
-    var mapCanvas = document.getElementById('map_canvas');
+  // function initialize() {
+  //   var mapCanvas = document.getElementById('map_canvas');
 
-    var mapOptions = {
-      center: new google.maps.LatLng(38.062358, -78.728313),
-      zoom: 14,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
+  //   var mapOptions = {
+  //     center: new google.maps.LatLng(38.062358, -78.728313),
+  //     zoom: 14,
+  //     mapTypeId: google.maps.MapTypeId.ROADMAP
+  //   }
 
-    var map = new google.maps.Map(mapCanvas, mapOptions);
+  //   var map = new google.maps.Map(mapCanvas, mapOptions);
 
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(38.062358, -78.728313),
-      map: map
-    });
-  }
+  //   var marker = new google.maps.Marker({
+  //     position: new google.maps.LatLng(38.062358, -78.728313),
+  //     map: map
+  //   });
+  // }
 
-  google.maps.event.addDomListener(window, 'load', initialize);
+  // google.maps.event.addDomListener(window, 'load', initialize);
 });
