@@ -88,7 +88,7 @@ post '/sign_up' do
     User.create(email: email, token: token)
   end
 
-  @notice = "Thanks, you will now get wedding updates emailed to you!"
+  session[:message] = "Thanks, you will now get wedding updates emailed to you!"
 
   redirect '/'
 end
@@ -100,7 +100,7 @@ get '/unsubscribe/:token' do
     user.destroy()
   end
 
-  @notice = "You have been unsubscribed."
+  session[:message] = "You have been unsubscribed."
 
   redirect '/'
 end

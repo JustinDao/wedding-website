@@ -119,6 +119,12 @@ $(document).ready(function() {
     return false;
   });
 
+  $("#notice-close").click(function(e) {
+    e.preventDefault();
+
+    $('#notice').collapse();
+  });
+
   // function initialize() {
   //   var mapCanvas = document.getElementById('map_canvas');
 

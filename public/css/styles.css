@@ -35,6 +35,19 @@ textarea {
   padding: 50px 0;
 }
 
+#notice {
+  text-align: center;
+  background-color: #428bca;
+  color: white;
+  font-size: 16px;
+}
+
+#notice-close {
+  float: right;
+  color: white;
+  margin-right: 20px;
+}
+
 .title-row {
   margin-top: 20px;
 }

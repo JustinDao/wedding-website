@@ -1,0 +1,10 @@
+<% if session[:message] %>
+  <div id="notice" class="row collapse in">
+    <div class="col-xs-12">
+      <%= session[:message] %>
+      <% session[:message] = nil %>
+
+      <a id="notice-close"> X </a>
+    </div>
+  </div>
+<% end %>
