@@ -28,7 +28,7 @@ helpers do
 end
 
 before do
-  pass if request.path_info.split('/')[1] == 'login'
+  pass if %w[login unsubscribe].include? request.path_info.split('/')[1]
 
   if not logged_in?
     session["password"] = nil
