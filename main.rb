@@ -3,6 +3,7 @@ require 'config_env'
 require 'digest'
 require 'data_mapper' 
 require 'digest/md5'
+require 'pony'
 
 ConfigEnv.path_to_config("#{__dir__}/config/config_env.rb")
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/wedding.db")
@@ -89,6 +90,22 @@ post '/sign_up' do
   end
 
   session[:message] = "Thanks, you will now get wedding updates emailed to you!"
+
+  Pony.mail to: email,
+            from: 'justinalex.dao@gmail.com',
+            subject: 'Justin & Alex - Mailing List',
+            body: (erb :"emails/sign_up_email_text", :locals => {token: token}, :layout => false),
+            html_body: (erb :"emails/sign_up_email", :locals => {token: token}, :layout => false),
+            via: :smtp,
+            via_options: {
+              :address              => 'smtp.gmail.com',
+              :port                 => '587',
+              :enable_starttls_auto => true,
+              :user_name            => ENV['gmail_username'],
+              :password             => ENV['gmail_password'],
+              :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
+              :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
+            }
 
   redirect '/'
 end

@@ -15,7 +15,9 @@ config_env do
   set 'about_justin', about_justin
   set 'about_us', about_us
   set 'email_salt', 'salt'
-  # Delete DATABASE_URL to use SQLite
-  # Delete DATABASE_URL when running `rake config_env:heroku`
+  set 'gmail_username', 'username'
+  set 'gmail_password', 'password'
+  # Delete/Comment DATABASE_URL to use SQLite
+  # Delete/Comment DATABASE_URL when running `rake config_env:heroku`
   set 'DATABASE_URL', 'postgres://user:password@hostname/database'
 end

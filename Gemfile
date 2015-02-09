@@ -5,3 +5,4 @@ gem 'config_env'
 gem 'data_mapper'
 gem 'dm-sqlite-adapter', :group => :development
 gem 'dm-postgres-adapter'
+gem 'pony'
