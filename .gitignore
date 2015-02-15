@@ -3,3 +3,5 @@
 # Ignore local environment variables
 /config/config_env.rb
 /config/about*
+
+wedding.db
