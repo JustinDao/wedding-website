@@ -74,6 +74,21 @@ post '/post' do
 
   Post.create(name: name, body: body)
 
+  Pony.mail to: [ENV['justin_email'], ENV['alex_email']].join(","),
+            from: 'justinalex.dao@gmail.com',
+            subject: 'Wedding Website - Someone posted on the guestbook!',
+            body: name + " posted: " + body,
+            via: :smtp,
+            via_options: {
+              :address              => 'smtp.gmail.com',
+              :port                 => '587',
+              :enable_starttls_auto => true,
+              :user_name            => ENV['gmail_username'],
+              :password             => ENV['gmail_password'],
+              :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
+              :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
+            }
+
   redirect '/'
 end
 
