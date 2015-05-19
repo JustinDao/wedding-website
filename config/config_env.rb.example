@@ -20,6 +20,7 @@ config_env do
   set 'registry_bbb', 'example.com/bbb'
   set 'registry_crate', 'example.com/crate'
   set 'registry_target', 'example.com/target'
+  set 'registry_honeyfund', 'example.com/honeyfund'
   # Delete/Comment DATABASE_URL to use SQLite
   # Delete/Comment DATABASE_URL when running `rake config_env:heroku`
   set 'DATABASE_URL', 'postgres://user:password@hostname/database'
