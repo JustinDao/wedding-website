@@ -1,8 +1,18 @@
 .gallery-image {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 247px;
+}
+
+.slick-slide img {
+  display: inline;
 }
 
 .slick-prev:before, .slick-next:before {
   color: black;
+}
+
+.slick-prev, .slick-next {
+  height: 100%;
+  top: 0%;
+  margin-top: 0%;
 }
