@@ -10,6 +10,38 @@
   <br>
 
   <div class="gallery-wrapper">
+
+    <% rotated = [10,12,14,15,18,21,27,28,42,57,58,63,67,74] %>
+
+    <% [*1..74].each_slice(3) do |slice| %>
+
+      <div class="row gallery-section">
+        <% slice.each do |index| %>
+          <% pictureString = "/engagement/%03d" % index  + ".jpg" %>
+
+          <% if rotated.include? index %>
+
+            <div class="col-xs-4 text-center">
+              <a class="gallery-link" href="<%= pictureString %>" data-width="2800" data-height="4200">
+                <img class="gallery-image" src="<%= pictureString %>" alt="photo">
+              </a>
+            </div>
+
+          <% else %>
+
+            <div class="col-xs-4 text-center">
+              <a class="gallery-link" href="<%= pictureString %>" data-width="4200" data-height="2800">
+                <img class="gallery-image" src="<%= pictureString %>" alt="photo">
+              </a>
+            </div>
+
+          <% end %>
+
+        <% end %>
+      </div>
+
+    <% end %>
+
     <div class="row gallery-section">
       <div class="col-xs-4 text-center">
         <a class="gallery-link" href="kathryn.jpg" data-width="2048" data-height="1536">
@@ -45,5 +77,6 @@
         </a>
       </div>
     </div>
+
   </div>
 </div>
