@@ -3,6 +3,10 @@
   max-height: 247px;
 }
 
+.gallery-section div {
+  margin-bottom: 5px;
+}
+
 .slick-slide img {
   display: inline;
 }
