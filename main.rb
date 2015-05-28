@@ -21,10 +21,13 @@ helpers do
     session["is_logged_in"] && session["password"] == Digest::MD5.hexdigest(ENV['login_password'])
   end
 
+  def logged_in_admin?
+    logged_in? && session["admin_logged_in"] && session["admin_password"] == Digest::MD5.hexdigest(ENV['admin_password'])
+  end
+
   def sanitize(text)
     Rack::Utils.escape_html(text)
   end
-
 end
 
 before do
@@ -50,7 +53,7 @@ end
 post '/login' do
   if params['password'] == ENV['login_password']
     session["is_logged_in"] = true
-    session["password"] = Digest::MD5.hexdigest ENV['login_password']
+    session["password"] = Digest::MD5.hexdigest(ENV['login_password'])
     redirect '/'
   else
     redirect '/login'
@@ -59,6 +62,7 @@ end
 
 get '/logout' do
   session["is_logged_in"] = false 
+  session["admin_logged_in"] = false 
   session["password"] = nil
   redirect '/'
 end
@@ -66,6 +70,41 @@ end
 get '/' do
   @posts = Post.all.reverse
   erb :index
+end
+
+get '/login_admin' do
+  if logged_in_admin?
+    redirect '/admin'
+  else
+    erb :login_admin
+  end
+end
+
+post '/login_admin' do
+  if params['password'] == ENV['admin_password']
+    session["admin_logged_in"] = true
+    session["admin_password"] = Digest::MD5.hexdigest(ENV['admin_password'])
+    redirect '/admin'
+  else
+    redirect '/login_admin'
+  end
+end
+
+get '/admin' do
+  if not logged_in_admin?
+    redirect '/login_admin'
+  else
+    erb :admin
+  end
+end
+
+get '/admin/emails' do
+  if not logged_in_admin?
+    redirect '/login_admin'
+  else
+    @emails = User.all.map{|u| u.email}
+    erb :emails
+  end
 end
 
 post '/post' do

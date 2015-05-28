@@ -6,6 +6,7 @@ about_us = File.open('config/about_us.html').read
 
 config_env do 
   set 'login_password', 'password'
+  set 'admin_password', 'password'
   set 'session_secret', 'mySecret'
   set 'alex_phone', '(555) 555-5555'
   set 'alex_email', 'alex@example.com'
